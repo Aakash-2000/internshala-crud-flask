@@ -1,0 +1,169 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1043%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(90%2c 173%2c 215%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c381.303C74.36%2c371.737%2c156.743%2c381.897%2c215.519%2c335.354C273.003%2c289.834%2c278.429%2c207.656%2c305.396%2c139.47C330.774%2c75.302%2c367.09%2c15.9%2c369.137%2c-53.074C371.439%2c-130.643%2c366.675%2c-215.092%2c317.707%2c-275.295C268.354%2c-335.971%2c187.12%2c-364.03%2c109.362%2c-372.453C38.338%2c-380.146%2c-23.297%2c-330.608%2c-93.926%2c-319.882C-180.06%2c-306.802%2c-284.233%2c-360.572%2c-349.428%2c-302.781C-413.09%2c-246.348%2c-389.048%2c-141.307%2c-391.317%2c-56.263C-393.345%2c19.746%2c-383.962%2c92.512%2c-361.917%2c165.282C-336.825%2c248.11%2c-328.682%2c351.448%2c-254.368%2c395.804C-179.936%2c440.231%2c-85.974%2c392.364%2c0%2c381.303' fill='%232e8dbd'%3e%3c/path%3e%3cpath d='M1440 1094.118C1573.095 1105.356 1715.375 1235.525 1826.721 1161.75 1938.563 1087.646 1870.712 903.783 1917.2060000000001 777.933 1958.708 665.594 2101.741 585.837 2083.195 467.522 2064.616 348.993 1916.93 304.764 1830.066 222.00599999999997 1753.146 148.72199999999998 1705.225 33.27200000000005 1601.818 8.899000000000001 1498.986-15.339000000000055 1407.835 76.707 1304.374 98.101 1187.946 122.17599999999999 1048.864 65.76600000000002 957.7049999999999 142.089 866.535 218.421 872.683 358.327 853.421 475.663 833.777 595.326 800.983 718.771 844.453 831.977 889.024 948.048 979.29 1049.715 1093.088 1099.8049999999998 1201.129 1147.3609999999999 1322.375 1084.1860000000001 1440 1094.118' fill='%2393c9e5'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1043'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+            background-repeat: repeat;
+            background-size: cover;
+
+        }
+
+        .row {
+            padding: 50px;
+        }
+
+        .card {
+            margin-bottom: 35px;
+        }
+        #f1{
+            margin:0 auto;
+        }
+        i {
+            cursor: pointer;
+        }
+
+        .custom-title {
+            display: flex;
+            justify-content: space-between;
+        }
+        #view-btn{
+            position: absolute;
+            right:    110px;
+            bottom:   20px;
+        }
+        #p2{
+            margin-top: 25px;
+        }
+    </style>
+    <title>Cart</title>
+</head>
+
+<body>
+    {% if data|length < 1 %} 
+    <div class='row h-100'>
+        <div class="col col-sm-12 col-md-12 my-auto">
+            <div class='card' style='width: 18rem;' id='f1'>
+                <img class="card-img-top"
+                    src="../static/home.svg"
+                    alt="Card image cap">
+
+                <div class="card-body">
+
+                    <div class="text-center">
+                        <a href='/create' class="btn btn-secondary"> Create new cart</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+       
+
+    {% else %} 
+    <div class='row'>
+        <div class="col col-sm-12 col-md-4">
+            <div class='card' style='width: 18rem;'>
+                <img class="card-img-top"
+                    src="../static/home.svg"
+                    alt="Card image cap">
+
+                <div class="card-body">
+
+                    <div class="text-center">
+                        <a href='/create' class="btn btn-secondary"> Create new cart</a>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        {% for x in data%}
+        <div class="col col-sm-12 col-md-4">
+            <div class='card' style='width: 18rem;height: 300px;'>
+
+
+                <div class="card-body">
+                    <div class='custom-title'>
+                        <h5 class="card-title">{{ x['title'] }}</h5>
+                        <i class="fas fa-trash" id='{{ x['_id'] }}' onclick="delCard(event)" title='delete'></i>
+
+                    </div>
+                    <div class='card-body'>
+                        <div class="text-center">
+                            {% if x['data']|length > 1 %}
+
+                            <p id='p2'> You have {{ x['data']|length }} items in this cart</p>
+                            {% else %}
+                            <p id='p2'> You have {{ x['data']|length }} item in this cart</p>
+                            {% endif %}
+                            <p id='p2'> Click the below button to view your cart</p>
+                            <a href='/view/{{ x['_id'] }}' id="view-btn" class="btn btn-secondary">View</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        {% endfor %}
+
+
+        </div>
+        {% endif %}
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+
+        <script>
+            function delCard(e) {
+                console.log(e.target.id)
+                fetch('/delCard', {
+
+                    method: 'POST',
+
+                    body: JSON.stringify({
+
+                        'id': e.target.id
+
+
+
+                    }),
+
+                    headers: {
+
+                        'Content-Type': 'application/json',
+
+                    }
+
+                }).then((response) => {
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    }
+                })
+
+            }
+        </script>
+</body>
+
+</html>
